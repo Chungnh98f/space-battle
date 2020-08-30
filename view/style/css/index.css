@@ -1,0 +1,65 @@
+@import "./form.css";
+@import "./layout.css";
+@import "./typo.css";
+@import "./style.css";
+@import "./screen.css";
+@import "./gameover.css";
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+
+.bg-dark {
+  background-color: black;
+  height: 600px;
+  width: 400px;
+}
+
+.d-none {
+  display: none;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.cyan {
+  color: cyan;
+}
+
+.m-auto {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.red {
+  color: red;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bot-0 {
+  bottom: 0;
+}
+
+.bg-img {
+  background-image: url("../../images/space.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-shadow {
+  box-shadow: 0px 12px 14px 14px #888888;
+}
+
+.font-num {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 30px;
+}
