@@ -3,8 +3,9 @@ import { Rock, Craft, Lightning, Bonus } from "../../models/enemies.js";
 import { newShip, Ship, Bullet } from "../../models/ship.js";
 import { isCollided } from "../../controllers/isCollided.js";
 import { setScreen } from "../../index.js";
+import { updateScore } from "./../../controllers/play.js";
 export const width = 600;
-export const height = 800;
+export const height = window.innerHeight;
 
 // const app = document.getElementById("app");
 
@@ -61,6 +62,8 @@ function render() {
   let run = requestAnimationFrame(render);
   if (newShip.blood == 0) {
     cancelAnimationFrame(run);
+    newShip.currentScore = newShip.score;
+    updateScore(newShip.currentScore);
     setScreen("gameover");
     document.getElementById("playScreen").classList.add("d-none");
     newShip.blood = 5;

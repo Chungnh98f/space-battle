@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
 }
-.bg {
+bg {
   width: 600px;
   height: 800px;
   background-image: url("./../../images/bg.jpg");
@@ -122,17 +122,6 @@
   width: 100%;
   height: 100%;
 }
-.lboard-section {
-  width: 400px;
-  height: 500px;
-  margin: 20px auto 0;
-
-  background-color: #e74c3c;
-
-  border-radius: 20px;
-  padding: 20px 40px;
-  position: relative;
-}
 
 .lboard-mem img {
   width: 50px;
@@ -140,20 +129,19 @@
   display: block;
 }
 .lboard-wrap {
-  position: absolute;
-  top: 70px;
-  left: 40px;
+  width: 400px;
+  height: 600px;
+  margin: 20px auto 0;
+  border-radius: 20px;
+  padding: 20px 40px;
+  position: relative;
   background: rgb(235, 191, 14);
   background: radial-gradient(
     circle,
     rgba(235, 191, 14, 1) 0%,
     rgba(230, 126, 34, 1) 100%
   );
-  width: 90%;
-  height: 100%;
-  border-radius: 15px;
   color: white;
-  padding: 20px;
 }
 .lboard-wrap .lboard-mem {
   display: flex;

@@ -1,6 +1,7 @@
 // import "./view/screen/play.js";
 import "./view/screen/mainpage.js";
 import "./view/components/form-input.js";
+import "./view/components/top-player.js";
 import "./view/screen/login.js";
 import "./view/screen/register.js";
 import "./controllers/auth.js";
@@ -25,5 +26,5 @@ function setScreen(screenName) {
     init();
   }
 }
-setScreen("main");
+setScreen("leaderboard");
 export { setScreen };

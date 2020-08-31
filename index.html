@@ -161,14 +161,14 @@
         </button>
 
       </div>
-      <div id="score" class="score">
+      <div class="score">
         <div class="currentScore">
           <div class="text-medium d-flex justified-content">SCORE</div>
-          <div class="text-medium d-flex justified-content">0</div>
+          <div id="score" class="text-medium d-flex justified-content">0</div>
         </div>
         <div class="bestScore">
           <div class="text-medium d-flex justified-content">BEST</div>
-          <div class="text-medium d-flex justified-content">0</div>
+          <div id="best" class="text-medium d-flex justified-content">0</div>
         </div>
       </div>
       <div id="buttons" class="button absolute bot-0">
@@ -184,8 +184,8 @@
   <!-- gameover-screen: end -->
 
   <!-- leaderboard: start -->
-  <template id="LeaderboardScreen">
-    <link rel="stylesheet" href="./view/style/css/index.css" />
+  <template id="leaderBoardScreen">
+    <link rel="stylesheet" href="./view/style/css/gameover.css" />
     <div class="bg m-auto box-shadow">
       <div>
       <button id="backBtn" class="btn back">
@@ -206,135 +206,61 @@
         </svg>
       </button>
     </div>
-    <div class="lboard-section">
-      <div class="lboard-tabs">
-        <div class="tabs">
-          <ul class="d-flex justified-content color-white text-medium">
-            <li>All Time Leaderboard</li>
-          </ul>
-        </div>
-      </div>
-      <div class="lboard-wrap">
-        <div class="lboard-mem">
-          <div class="img">
-            <img src="./view/images/avatar.png" />
-          </div>
-          <div class="name-bar">
-            <p>
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                data-icon="medal"
-                class="svg-inline--fa fa-medal fa-w-5 gold-medal"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z"
-                ></path>
-              </svg>
-              Number 1
-            </p>
-            <div class="bar-wrap">
-              <div class="inner-bar" style="width: 95%"></div>
-            </div>
-          </div>
-          <div class="scores">420</div>
-        </div>
-        <div class="lboard-mem">
-          <div class="img">
-            <img src='./view/images/avatar.png' />
-          </div>
-          <div class="name-bar">
-            <p>
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                data-icon="medal"
-                class="svg-inline--fa fa-medal fa-w-5 silver-medal"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z"
-                ></path>
-              </svg>
-              Number 2
-            </p>
-            <div class="bar-wrap">
-              <div class="inner-bar" style="width: 80%"></div>
-            </div>
-          </div>
-          <div class="scores">390</div>
-        </div>
-        <div class="lboard-mem">
-          <div class="img">
-            <img src="./view/images/avatar.png" />
-          </div>
-          <div class="name-bar">
-            <p>
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="fas"
-                data-icon="medal"
-                class="svg-inline--fa fa-medal fa-w-5 bronze-medal"
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z"
-                ></path>
-              </svg>
-              Number 3
-            </p>
-            <div class="bar-wrap">
-              <div class="inner-bar" style="width: 60%"></div>
-            </div>
-          </div>
-          <div class="scores">200</div>
-        </div>
-        <div class="lboard-mem">
-          <div class="img"><img src="./view/images/avatar.png" /></div>
-          <div class="name-bar">
-            <p>
-              <span>4. </span>
-              Number 4
-            </p>
-            <div class="bar-wrap">
-              <div class="inner-bar" style="width: 30%"></div>
-            </div>
-          </div>
-          <div class="scores">69</div>
-        </div>
-        <div class="lboard-mem">
-          <div class="img"><img src="./view/images/avatar.png" /></div>
-          <div class="name-bar">
-            <p>
-              <span>5. </span>
-              Number 5
-            </p>
-            <div class="bar-wrap">
-              <div class="inner-bar" style="width: 25%"></div>
-            </div>
-          </div>
-          <div class="scores">50</div>
-        </div>
-      </div>
+
+  </div>
+  <!-- <div class="lboard-section"> -->
+    
+    <div class="lboard-wrap">
+      <h1 class="d-flex justified-content color-white text-medium">All Time Leaderboard</h1>
+      <div id="leaderBoard" class="lboard-mem">
     </div>
-    </div>  
+
+  </div>
   </template>
   <!-- leaderboard: end -->
 
-    <script src="./index.js" type="module" defer></script>
-    <script src="./view/screen/play.js" type="module"></script>
+<!-- top-player: start -->
+  <template id="topPlayer">
+    <link rel="stylesheet" href="./view/style/css/gameover.css" />
+    <div class="lboard-mem">
+             <div id="rank"></div>
+             <div id="player"></div>
+             <div id="score"></div>
+    </div>
+  </template>
+<!-- top-player:end -->
+
+
+   
   </body>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script> -->
+
+  <script>
+    // Your web app's Firebase configuration
+  const firebaseConfig = {
+  apiKey: "AIzaSyBte-Cvlkej1VN9yy8NSBgX2FkHNI7fO_w",
+  authDomain: "space-craft-battle.firebaseapp.com",
+  databaseURL: "https://space-craft-battle.firebaseio.com",
+  projectId: "space-craft-battle",
+  storageBucket: "space-craft-battle.appspot.com",
+  messagingSenderId: "60786592300",
+  appId: "1:60786592300:web:50fcd2eda700c931be5f89"
+};
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // firebase.analytics();
+    const db = firebase.firestore();
+    console.log(db);
+  </script>
+
+<script src="./index.js" type="module" defer></script>
+<script src="./view/screen/play.js" type="module"></script>
 </html>

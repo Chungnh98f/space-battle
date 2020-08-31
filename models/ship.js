@@ -9,19 +9,6 @@ const bullet = new Image();
 
 bullet.src = "https://image.flaticon.com/icons/svg/2614/2614487.svg";
 
-function drawCircle(x, y, r, color) {
-  ctx.fillStyle = color;
-  ctx.beginPath();
-  ctx.arc(x, y, r, 0, Math.PI * 2, false);
-  ctx.closePath();
-  ctx.fill();
-}
-
-function drawRect(x, y, w, h, color) {
-  ctx.fillStyle = color;
-  ctx.fillRect(x, y, w, h);
-}
-
 export class Ship {
   constructor(size, x, y, velX) {
     this.size = size;
@@ -33,6 +20,7 @@ export class Ship {
     this.blood = 5;
     this.level = 1;
     this.score = 0;
+    this.currentScore = 0;
   }
 
   render() {
